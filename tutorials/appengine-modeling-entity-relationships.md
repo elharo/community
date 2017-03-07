@@ -24,8 +24,8 @@ book where users can store their contacts. For each contact the user stores, you
 want to capture the contact's name, birthday (which they mustn't forget!),
 address, telephone number, and company they work for.
 
-When the user wants to add an address, they enter the information into a form
-and the form saves the information in a model that looks something like this:
+When the user wants to add an address, they enter the information into a form.
+The form saves the information in a model that looks something like this:
 
     class Contact(db.Model):
 
@@ -45,9 +45,9 @@ and the form saves the information in a model that looks something like this:
         company_description = db.StringProperty()
         company_address = db.PostalAddressProperty()
 
-That's great, your users immediately begin to use their address book and soon
+That's great. Your users immediately begin to use their address books, and soon
 the datastore starts to fill up. Not long after the deployment of your new
-application you hear from someone that they are not happy that there is only one
+application, you hear from someone that they are not happy that there is only one
 phone number. What if they want to store someone's work telephone number in
 addition to their home number? No problem you think, you can just add a work
 phone number to your structure. You change your data structure to look more like
@@ -57,7 +57,7 @@ this:
     phone_number = db.PhoneNumberProperty()
     work_phone_number = db.PhoneNumberProperty()
 
-Update the form with the new field and you are back in business. Soon after
+Update the form with the new field, and you are back in business. Soon after
 redeploying your application, you get a number of new complaints. When they see
 the new phone number field, people start asking for even more fields. Some
 people want a fax number field, others want a mobile field. Some people even
